@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grouped Anagrams</title>
+</head>
+<body>
+    <h1>Grouping Anagrams</h1>
+
+    {% if input %}
+        <h2>Input Words:</h2>
+        <p>{{ input }}</p>
+    {% else %}
+        <form method="post" action="{% url 'group_anagrams' %}">
+            {% csrf_token %}
+            <label for="words">Enter words (space-separated):</label><br>
+            <input type="text" id="words" name="words" required><br><br>
+            <input type="submit" value="Group Anagrams">
+        </form>
+    {% endif %}
+
+    {% for group in anagrams %}
+        <h2>Group {{ forloop.counter }}</h2>
+        <ul>
+            {% for word in group %}
+                <li>{{ word }}</li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+</body>
+</html>
