@@ -15,3 +15,19 @@ To use the Anagrams Grouping function in your project, follow these steps:
 1. Clone the repository: git clone https://github.com/jhansiKaranam64/AnagramsGrouping.git
 2. Import the anagrams_grouping module in your code.
 
+## Using django 
+
+## Installation
+
+1. Clone the repository: https://github.com/jhansiKaranam64/AnagramsGrouping.git
+2. Create a virtual environment: python -m venv env
+3. Activate the virtual environment
+4. Install the dependencies: pip install -r requirements.txt
+5. Run the migrations: python manage.py migrate
+
+## Usage
+
+1. Start the development server: python manage.py runserver
+2.  Visit `http://localhost:8000/` in your browser.
+3.  Enter a list of words separated by spaces in the provided form.
+4. Click the "Group Anagrams" button to display the grouped anagrams based on your input.
